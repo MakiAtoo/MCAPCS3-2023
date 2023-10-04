@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+  <head>
+      <title>My First webpage</title>
+  </head>
+  <body>
+    <h1>Welcome to CS3!</h1>
+    <a href="https://krunker.io/">Next Page</a>
+  </body>
+</html>
