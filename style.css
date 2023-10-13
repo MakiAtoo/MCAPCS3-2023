@@ -1,24 +1,24 @@
 body { 
     background-image: url("image.jpg");
     background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover; 
+    background-repeat: no-repeat; 
+	background-size: cover;
 }
 h1 { 
          text-align: center; 
-         font-family: Roboto Condensed, Autour One, Teko; 
+         font-family: "Lucida Console", "Courier New" , monospace; 
          border-style: dotted; 
          border-color: blue; 
          border-width: 2px; 
          padding: 10px 15px 10px 15px; 
          width: 250px;
          margin-bottom: 20px; 
-         background-color: #FF5733;
+         background-color: #a7b8b0; 
  } 
   
  p { 
          text-align: justify; 
-         background-color: hsl(180, 70%, 45%); 
+         background-color: hsl(150, 55%, 52%); 
          font-style: italic; 
          padding: 20px; 
          border-color: black; 
@@ -30,7 +30,7 @@ h1 {
  span { 
          font-weight: bold; 
          font-style: italic; 
-         color: rgb(255,87,51); 
+         color: rgb(167,193,221); 
          margin-left: 2px; 
          margin-right: 5px; 
  }
