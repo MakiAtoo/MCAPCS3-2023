@@ -1,5 +1,5 @@
 body { 
-    background-image: url(";
+    background-image: url("image.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover; 
@@ -13,7 +13,7 @@ h1 {
          padding: 10px 15px 10px 15px; 
          width: 250px;
          margin-bottom: 20px; 
-         background-color: hsl(11, 80%, 60%); 
+         background-color: #FF5733;
  } 
   
  p { 
@@ -30,7 +30,7 @@ h1 {
  span { 
          font-weight: bold; 
          font-style: italic; 
-         color: rgb(255,50,50); 
+         color: rgb(255,87,51); 
          margin-left: 2px; 
          margin-right: 5px; 
  }
