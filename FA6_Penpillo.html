@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+		#link1{
+            color: blue;
+            background-color: yellow;
+            text-decoration: none;
+        }
+
+        #link1:visited {
+            color: purple;
+			background-color:cyan;
+        }
+
+        #link1:hover {
+            color: red;
+            background-color: lightblue;
+        }
+
+        #link1:active {
+            color: white;
+            background-color: green;
+        }
+
+        #link2{
+            color: green;
+            background-color: orange;
+            text-decoration: none;
+        }
+
+        #link2:visited {
+            color: brown;
+			background-color:lightgray;
+        }
+
+        #link2:hover {
+            color: yellow;
+            background-color: pink;
+        }
+
+        #link2:active {
+            color: black;
+            background-color: purple;
+        }
+
+       
+        div {
+            width: 200px;
+            height: 100px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+
+        #div1:target {
+            background-color: blue;
+            color: white;
+        }
+
+        #div2:target {
+			background-color:cyan;
+            border: 10px dotted green;
+        }
+    </style>
+    <title>Styled Webpage</title>
+</head>
+<body>
+
+    <a href="#div1" id="link1">First Link</a>
+    <br>
+    <a href="#div2" id="link2">Second Link</a>
+    <br>
+    
+    <div id="div1">First Div</div>
+    <br>
+    
+    <div id="div2">Second Div</div>
+
+</body>
+</html>
