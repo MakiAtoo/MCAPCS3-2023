@@ -1,0 +1,33 @@
+int main() {
+    string Name;
+    int item1, item2, item3, item4, item5, order1,order2,order3,order5;
+    double Vat,order4,subtotal,grandtotal;
+    Vat=0.20;
+    cout<<"Hi, Welcome to Murakeni Cafeteria, Please enter your name"<<endl;
+    cin>>Name;
+    cout<<"Please enter your order for the Tex-Mex Fries"<<endl;
+    cin>>item1;
+    cout<<"Please enter your order for the Double Down Angus Burger"<<endl;
+    cin>>item2;
+    cout<<"Please enter your order for the Honey Glazed Donuts"<<endl;
+    cin>>item3;
+    cout<<"Please enter your order for the Ice Cream"<<endl;
+    cin>>item4;
+    cout<<"Please enter your order for the Soft Drinks"<<endl;
+    cin>>item5;
+    order1=(item1*80);
+    order2=(item2*150);
+    order3=(item3*30);
+    order4=(item4*25.5);
+    order5=(item5*20);
+    subtotal=(order1+order2+order3+order4+order5);
+    grandtotal=(subtotal*Vat)+subtotal;
+    cout<<"Hello "<<Name<<" your order is;"<<endl;
+    cout<<"Tex-Mex Fries:"<<item1<<endl;
+    cout<<"Double Down Angus Burger:"<<item2<<endl;
+    cout<<"Honey Glazed Donuts:"<<item3<<endl;
+    cout<<"Ice Cream:"<<item4<<endl;
+    cout<<"Soft Drinks:"<<item5<<endl;
+    cout<<"Your total order with VAT is:"<<grandtotal<<" PHP"<<endl;
+	return 0;
+}
