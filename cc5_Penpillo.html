@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Modified Flames</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body {
+                background-color: lightseagreen;
+            }
+           
+        </style>
+    </head>
+    <body>
+        <h1> Modified FLAMES </h1>
+
+        <button onclick="flames()">Match Names</button>
+        <h3 id="name"></h3>
+
+        <h4>FLAMES Result:</h4>
+        <h3 id="result"></h3>
+
+
+        <script>
+            function flames(){
+				var X=prompt("Enter The First Name: ");
+				var Y=prompt("Enter The Second Name: ");
+				var Z=X.replace(/[.,*&^%$#@!><;:\|]/g,"");
+				var W=Y.replace(/[.,*&^%$#@!><;:\|]/g,"");
+				var name1=Z.replace(/\s/g,"");
+				var name2=W.replace(/\s/g,"");
+				document.getElementById("name").innerHTML=name1 + " and " + name2;
+				function relationship(){
+					var allName=name1 + name2;
+					var length=allName.length ;
+					var rel=(length % 6);
+					switch (rel){
+						case 1:
+							var rel1="F is for Friends";
+							return rel1;
+							break;
+						case 2:
+							var rel1="L is for Lovers";
+							return rel1;
+							break;
+						case 3:
+							var rel1="A is for Acquaintances";
+							return rel1;
+							break;
+						case 4:
+							var rel1="M is for Marriage";
+							return rel1;
+							break;
+						case 5:
+							var rel1="E is for Enemies";
+							return rel1;
+							break;
+						case 0:
+							var rel1="S is for Sweethearts";
+							return rel1;
+							break;
+					}
+				}
+				document.getElementById("result").innerHTML=relationship();
+            }
+        </script>
+    </body>
