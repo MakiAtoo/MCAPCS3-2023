@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            table{
+                border-collapse : collapse;
+            }
+        </style>
+    </head>
+    <body>
+        <h4>MULTIPLICATION TABLE</h4>
+        <script>
+            var n=prompt("enter number of columns");
+            var m=prompt("enter number of rows");
+            var p=1;
+            multiplicationTable();
+            function multiplicationTable(){
+                if(n < 2 || m < 2){
+                    alert("ONLY ENTER A NUMBER FROM 2-10");
+                }
+                else{
+                    document.write("<table border='1px'>");
+                    document.write("<tr>");
+                    for (var i = 1; i <= n; i++){
+                        document.write("<th>" + i + "</th>");
+                    }
+                    document.write("</tr>");
+                    while (m>0){
+                        document.write("<tr>");
+                        for(var k=1; k<=n; k++){
+                            document.write("<td>" + k + " x " + p + " = " + (k*p) + "</td>" );
+                        }
+                        document.write("</tr>");
+                        p++;
+                        m--;
+                    }
+                    document.write("</table>");
+                }
+            }
+        </script>
+    </body>
+</html>
+    
