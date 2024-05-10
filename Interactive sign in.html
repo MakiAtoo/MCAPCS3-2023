@@ -1,0 +1,245 @@
+<DOCTYPE html>
+    <html>
+        <head>
+            <style>
+                #forms {
+                    
+                }
+            </style>
+        </head>
+        <body onload="checkInputForm()">
+            <div id="forms">
+                <h1>SIGN-UP</h1>
+                <form id="sign-up" name="TheForm">
+                    <fieldset id="Name" form="sign-up">
+                        <label for="Name1">Name:</label>
+                        <input type="text" value="" id="Name1" name="Name" onblur="checkInputName()" onchange="checkInputName() ; checkInputForm()"><br><br>
+                        <p id="warningName"></p>
+                    </fieldset>
+                    <br>
+                    <fieldset id="userName" form="sign-up">
+                        <label for="userName1">UserName:</label>
+                        <input type="text" value="" id="userName1" name="userName" onblur="checkInputUserName()" onchange="checkInputUserName() ; checkInputForm()"><br><br>
+                        <p id="warninguserName"></p>
+                    </fieldset>
+                    <br>
+                    <fieldset id="userSex">
+                        <label for="userSex1">Sex:</label><br>
+                        <select id="userSex1" onblur="checkInputSex()" onchange="checkInputSex()">
+                            <option value="">Gender</option>
+                            <option value="male">MALE</option>
+                            <option value="female">FEMALE</option>
+                            <option value="confidential">PREFER NOT TO SAY</option>
+                        </select><br><br>
+                        <p id="warningSex"></p>
+                    </fieldset>
+                    <br>
+                    <fieldset id="pword">
+                        <label for="pword1">Password:</label>
+                        <input type="password" value="" id="pword1" name="pword" onblur="checkInputPassword()" onchange="checkInputPassword() ; checkInputForm()"><br><br>
+                        <p id="warningPword"></p>
+                    </fieldset>
+                    <br>
+                    <fieldset id="mailE">
+                        <label for="mailE1">EMAil:</label>
+                        <input type="email" value="" id="mailE1" name="mailE" onblur="checkInputEmail()" onchange="checkInputEmail() ; checkInputForm()"><br><br>
+                        <p id="warningEmail"></p>
+                    </fieldset>
+                    <br>
+                    <fieldset id="Loc">
+                        <label for="Loc1">Adress:</label>
+                        <input type="text" value="" id="Loc1" name="Loc" onblur="checkInputAdress()" onchange="checkInputAdress(); checkInputForm()"><br><br>
+                        <p id="warningLoc"></p>
+                    </fieldset>
+                    <br>
+                    <fieldset id="Interest">
+                        <label for="Interest1">Short Interests:</label>
+                        <input type="text" value="" id="Interest1" name="Interest" onblur="checkInputInterest()" onchange="checkInputInterest(); checkInputForm()"><br><br>
+                        <p id="warningInterest"></p>
+                    </fieldset>
+                    <br>
+                    <fieldset>
+                        <input id="submitbutton" type="button" value="Submit" onclick="displayFunction()">
+                        <input type="reset" onclick="resetForms()">
+                    </fieldset>
+                </form> 
+            </div>
+            
+                <div>
+                    <h2 id="ACC"></h2>
+                    <h4 id="NAME"></h4>
+                    <p id="nameDisplay"></p><br>
+                    <h4 id="USERNAME"></h4>
+                    <p id="usernameDisplay"></p><br>
+                    <h4 id="SEX"></h4>
+                    <p id="sexDisplay"></p><br>
+                    <h4 id="PASSWORD"></h4>
+                    <p id="pwordDisplay"></p><br>
+                    <h4 id="EMAIL"></h4>
+                    <p id="mailEDisplay"></p><br>
+                    <h4 id="ADRESS"></h4>
+                    <p id="LocDisplay"></p><br>
+                    <h4 id="INT"></h4>
+                    <p id="InterestDisplay"></p>
+                </div>
+            <script>
+                var Name;
+                var userName;
+                var Sex;
+                var password;
+                var Email;
+                var Adress;
+                var x=false;
+                var y=false;
+                var z=false;
+                var w=false;
+                var s=false;
+                var t=false;
+                var u=false;
+                function checkInputForm(){
+                    if(x == 1 && y == 1 && z == 1 && w == 1 && s == 1 &&  t == 1 && u ==1){
+                        document.getElementById("submitbutton").disabled = false;
+                    }
+                    else{
+                        document.getElementById("submitbutton").disabled = true;
+                    }
+                }
+                function checkInputName(){
+                    Name=document.getElementById("Name1").value;
+                    if(Name === ""){
+                        document.getElementById("Name").style.borderColor = "red";
+                        document.getElementById("warningName").innerHTML="*ENTER YOUR NAME FIRST";
+                    }
+                    else {
+                        document.getElementById("Name").style.borderColor = "green";
+                        document.getElementById("warningName").innerHTML="";
+                        x = true;
+                        checkInputForm();
+                    }
+                    return false;
+                }
+                function checkInputUserName(){
+                    userName=document.getElementById("userName1").value;
+                    if(userName === ""){
+                        document.getElementById("userName").style.borderColor = "red";
+                        document.getElementById("warninguserName").innerHTML="*ENTER YOUR USERNAME FIRST";
+                    }
+                    else {
+                        document.getElementById("userName").style.borderColor = "green";
+                        document.getElementById("warninguserName").innerHTML="";
+                        y = true;
+                        checkInputForm();
+                    }
+                    return false;
+                }
+                function checkInputSex(){
+                    Sex=document.getElementById("userSex1").value;
+                    if(Sex === ""){
+                        document.getElementById("userSex").style.borderColor = "red";
+                        document.getElementById("warningSex").innerHTML="*SELECT YOUR SEX FIRST";
+                    }
+                    else {
+                        document.getElementById("userSex").style.borderColor = "green";
+                        document.getElementById("warningSex").innerHTML="";
+                        z = true;
+                        checkInputForm();
+                    }
+                    return false;
+                }
+                function checkInputPassword(){
+                    password=document.getElementById("pword1").value;
+                    if(password === ""){
+                        document.getElementById("pword").style.borderColor = "red";
+                        document.getElementById("warningPword").innerHTML="*ENTER YOUR PASSWORD FIRST";
+                    }
+                    else {
+                        document.getElementById("pword").style.borderColor = "green";
+                        document.getElementById("warningPword").innerHTML="";
+                        w = true;
+                        checkInputForm();
+                    }
+                    return false;
+                }
+                function checkInputEmail(){
+                    Email=document.getElementById("mailE1").value;
+                    if(Email === ""){
+                        document.getElementById("mailE").style.borderColor = "red";
+                        document.getElementById("warningEmail").innerHTML="*ENTER YOUR EMAIL FIRST";
+                    }
+                    else {
+                        document.getElementById("mailE").style.borderColor = "green";
+                        document.getElementById("warningEmail").innerHTML="";
+                        s = true;
+                        checkInputForm();
+                    }
+                    return false;
+                }
+                function checkInputAdress(){
+                    Adress=document.getElementById("Loc1").value;
+                    if(Adress === ""){
+                        document.getElementById("Loc").style.borderColor = "red";
+                        document.getElementById("warningLoc").innerHTML="*ENTER YOUR ADRESS FIRST";
+                    }
+                    else {
+                        document.getElementById("Loc").style.borderColor = "green";
+                        document.getElementById("warningLoc").innerHTML="";
+                        u = true;
+                        checkInputForm();
+                    return false;
+                    }
+                }
+                function checkInputInterest(){
+                    Adress=document.getElementById("Interest1").value;
+                    if(Adress === ""){
+                        document.getElementById("Interest").style.borderColor = "red";
+                        document.getElementById("warningInterest").innerHTML="*ENTER YOUR INTERESTS FIRST";
+                    }
+                    else {
+                        document.getElementById("Interest").style.borderColor = "green";
+                        document.getElementById("warningInterest").innerHTML="";
+                        t = true;
+                        checkInputForm();
+                    return false;
+                    }
+                }
+                
+
+                function displayFunction(){
+                    document.getElementById("ACC").innerHTML="My Account";
+                    document.getElementById("NAME").innerHTML="Name : ";
+                    document.getElementById("nameDisplay").innerHTML=Name;
+                    document.getElementById("USERNAME").innerHTML="USERNAME : ";
+                    document.getElementById("usernameDisplay").innerHTML=userName;
+                    document.getElementById("SEX").innerHTML="SEX : ";
+                    document.getElementById("sexDisplay").innerHTML=Sex;
+                    document.getElementById("PASSWORD").innerHTML="PASSWORD : ";
+                    document.getElementById("pwordDisplay").innerHTML=password;
+                    document.getElementById("EMAIL").innerHTML="EMAIL : ";
+                    document.getElementById("mailEDisplay").innerHTML=Email;
+                    document.getElementById("ADRESS").innerHTML="ADRESS: ";
+                    document.getElementById("LocDisplay").innerHTML=Adress;
+                    document.getElementById("INT").innerHTML="INTERESTS : ";
+                    document.getElementById("InterestDisplay").innerHTML=Adress;
+                    document.getElementById("InterestDisplay").scrollIntoView();
+                    return false;
+                }
+                function resetForms(){
+                    Name="";
+                    document.getElementById("nameDisplay").innerHTML=Name;
+                    userName="";
+                    document.getElementById("usernameDisplay").innerHTML=userName;
+                    Sex="";
+                    document.getElementById("sexDisplay").innerHTML=Sex;
+                    password="";
+                    document.getElementById("pwordDisplay").innerHTML=password;
+                    Email="";
+                    document.getElementById("mailEDisplay").innerHTML=Email;
+                    Adress="";
+                    document.getElementById("LocDisplay").innerHTML=Adress;
+                    return false;
+                }
+           </script>
+           
+        </body>
+          
+    </html>
